@@ -1,0 +1,10 @@
+flask
+flask-cors
+easyocr
+pillow
+opencv-python
+fuzzywuzzy
+python-Levenshtein
+pytesseract
+werkzeug
+numpy

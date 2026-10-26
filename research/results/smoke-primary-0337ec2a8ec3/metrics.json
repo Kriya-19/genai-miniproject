@@ -1,0 +1,13 @@
+{
+  "cases": 2,
+  "completed": 2,
+  "valid_predictions": 2,
+  "coverage": 1.0,
+  "top_1_accuracy": 0.5,
+  "top_5_accuracy": 0.5,
+  "failure_rate": 0.0,
+  "latency_ms": {
+    "median": 104292.04,
+    "p95": 104292.04
+  }
+}

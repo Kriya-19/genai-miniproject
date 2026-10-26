@@ -1,0 +1,7 @@
+test_id,objective,status,evidence,limitation
+F-001,backend regression tests,PASS,pytest backend/tests - 2 passed,small suite
+F-002,research regression tests,PASS,pytest research/tests - 2 passed,does not prove clinical validity
+F-003,primary smoke experiment,PASS,smoke-primary metrics.json,synthetic two-case fixture
+F-004,full orchestrator smoke experiment,PASS,smoke-full metrics.json,external calls and small fixture
+F-005,frontend production build,PASS,npm run build,build does not prove browser integration
+F-006,backend compilation,PASS,compileall backend,does not test external services

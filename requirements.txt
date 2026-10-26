@@ -1,0 +1,13 @@
+aiohttp
+numpy
+python-dotenv
+requests
+scikit-learn
+SpeechRecognition
+pyttsx3
+opencv-python
+pytesseract
+easyocr
+Pillow
+fuzzywuzzy
+python-Levenshtein

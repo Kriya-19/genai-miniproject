@@ -1,0 +1,2 @@
+{"id":"smoke-influenza","text":"I have fever, cough, body ache, chills and fatigue for three days.","reference_labels":["Influenza"],"source":"synthetic_software_smoke_test"}
+{"id":"smoke-cold","text":"I have a runny nose, sore throat and a mild cough.","reference_labels":["Common Cold"],"source":"synthetic_software_smoke_test"}

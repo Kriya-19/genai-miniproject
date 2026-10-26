@@ -1,0 +1,34 @@
+sequenceDiagram
+  participant User
+  participant Frontend
+  participant API as FastAPI
+  participant Service as DiagnosisService
+  participant Adapter as AgentAdapter
+  participant Orch as OrchestratorAgent
+  participant Parser as SymptomParser
+  participant Dx as DiagnosisAgent
+  participant Lit as LiteratureAgent
+  participant Cases as CaseStudyAgent
+  participant Explain as ExplainabilityAgent
+  User->>Frontend: Submit natural-language symptoms
+  Frontend->>API: POST /api/analyze
+  API->>Service: Create processing DiagnosisCase
+  Service->>Adapter: analyze(text)
+  Adapter->>Orch: process_natural_language_input(text)
+  Orch->>Parser: extract_symptoms_from_text
+  Parser-->>Orch: symptoms or error
+  Orch->>Orch: Apply safety-warning rules
+  Orch->>Dx: diagnose(symptoms, default context)
+  Dx-->>Orch: ranked diagnoses
+  Orch->>Lit: process(diagnoses, symptoms)
+  Lit-->>Orch: evidence or unavailable
+  Orch->>Cases: process(diagnoses, symptoms)
+  Cases-->>Orch: case reports or unavailable
+  Orch->>Explain: generate_explainability_report
+  Explain-->>Orch: report
+  Orch-->>Adapter: raw result
+  Adapter-->>Service: raw result
+  Service->>Service: Normalize and persist result
+  Service-->>API: completed result
+  API-->>Frontend: case_id and status/result
+  Note over Lit,Cases: Sequential conditional calls; not parallel

@@ -1,0 +1,8 @@
+agent,source,input,output,dependencies,status
+EnhancedSymptomParser,model/symptoms.py,natural-language text,extracted symptom dictionaries,Hugging Face model resources,implemented and smoke-tested
+DiagnosisAgent,model/diagnosis.py,symptoms plus default context,top diagnosis and ordered differential,optional DXGPT; local fallback,implemented and smoke-tested
+LiteratureAgent,model/literature_agent.py,diagnoses and symptoms,PubMed/trial evidence and summary,PubMed and ClinicalTrials.gov,implemented but network-dependent
+CaseStudyAgent,model/case_study_agent.py,diagnoses and symptoms,PubMed case reports and summary,NCBI PubMed,implemented but network-dependent
+ExplainabilityAgent,model/explainability.py,diagnoses and evidence summaries,natural-language report,Python formatting logic,implemented
+Safety rules,model/agent.py,text and symptoms,red-flag warning strings,hard-coded rules,implemented but incomplete triage
+AgentAdapter,backend/app/integrations/agent_adapter.py,text,raw orchestrator result,unchanged model repository,implemented

@@ -1,0 +1,10 @@
+feature,frontend,backend_or_model,storage_or_provider,status,verification_or_limitation
+Authentication,LoginPage.jsx,/api/auth/* + security.py,users + JWT,implemented,backend tests and startup verified
+Diagnosis,DiagnosisPage.jsx,/api/analyze + DiagnosisService,diagnosis_cases + model agents,implemented,full and primary smoke runs completed
+Diagnosis history,DashboardPage.jsx and results pages,/api/cases,diagnosis_cases,implemented,API routes inspected; limited test coverage
+Health passport,HealthPassportPage.jsx,/api/patients/me/passport,users + health_records,implemented,QR/PDF/shared endpoints previously verified
+Record upload/download,MedicalRecordPage.jsx,/api/patients/me/records,upload directory + health_records,implemented,route and ownership checks inspected
+Clinic finder,ClinicsPage.jsx,/api/clinics,Overpass/Nominatim/OpenStreetMap,implemented but externally dependent,fallback/provider availability required
+Consultations,ConsultationsPage.jsx + doctor workspace,/api/consultations,Jitsi external room,implemented but moderator dependent,public Jitsi moderator limitation
+Reminders,RemindersPage.jsx,/api/reminders,reminders + APScheduler,implemented but provider limited,local scheduler configured
+Research mode,DiagnosisPage.jsx,research endpoints + research package,research/results,partially implemented,real scripts run; frontend is read-only

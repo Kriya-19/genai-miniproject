@@ -1,0 +1,3 @@
+experiment_id,cases,coverage,top_1_accuracy,top_5_accuracy,failure_rate,median_latency_ms,p95_latency_ms
+smoke-full-79755e4f9c48,2,1.0,0.5,0.5,0.0,35334.61,35334.61
+smoke-primary-0337ec2a8ec3,2,1.0,0.5,0.5,0.0,104292.04,104292.04

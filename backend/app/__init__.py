@@ -1,0 +1,1 @@
+"""DiagnoSure backend application."""

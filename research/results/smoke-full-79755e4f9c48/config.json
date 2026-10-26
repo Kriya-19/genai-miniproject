@@ -1,0 +1,5 @@
+{
+  "name": "smoke",
+  "pipeline": "full",
+  "seed": 42
+}
